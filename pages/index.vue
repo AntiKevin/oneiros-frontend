@@ -8,8 +8,7 @@
       flex-dir="column"
       justify-content="center"
     >
-      <CHeading text-align="center" mb="4"> ⚡️ Projeto Oneiros/Home </CHeading>
-      <CFlex justify="center" direction="column" align="center">
+      <CHeading text-align="center" mt="4" mb="4">
         <CBox mb="3">
           <CIconButton
             mr="3"
@@ -17,6 +16,11 @@
             :aria-label="`Switch to ${colorMode === 'light' ? 'dark' : 'light'} mode`"
             @click="toggleColorMode"
           />
+        </CBox>
+      </CHeading>
+      <CFlex justify="center" direction="column" align="center">
+        <CBox mb="3">
+          <topArtists />
         </CBox>
       </CFlex>
     </CBox>
@@ -42,6 +46,8 @@ import {
   CHeading
 } from '@chakra-ui/vue'
 
+import topArtists from '~/components/topArtists.vue'
+
 export default {
   name: 'IndexPage',
   components: {
@@ -59,7 +65,9 @@ export default {
     CModalCloseButton,
     CIconButton,
     CFlex,
-    CHeading
+    CHeading,
+    //internal components
+    topArtists
   },
   inject: ['$chakraColorMode', '$toggleColorMode'],
   data () {
@@ -87,6 +95,6 @@ export default {
     toggleColorMode () {
       return this.$toggleColorMode
     }
-  }
+  },
 }
 </script>
