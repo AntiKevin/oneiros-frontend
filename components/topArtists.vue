@@ -1,7 +1,7 @@
 <template>
   <c-box>
-    <CHeading text-align="center" mb="4"> ⚡️ Top Artistas Escutados </CHeading>
-    <c-list class="list-container">
+    <CHeading text-align="center" mb="4">
+      ⚡️ Top Artistas Escutados
       <c-spinner
         v-if="loading"
         thickness="4px"
@@ -10,6 +10,8 @@
         color="vue.500"
         size="xl"
       />
+    </CHeading>
+    <c-list class="list-container">
       <c-flex direction="column">
         <c-box
           p="4"

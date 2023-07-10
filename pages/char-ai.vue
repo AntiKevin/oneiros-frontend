@@ -19,17 +19,13 @@
         </CBox>
       </CHeading>
       <CFlex justify="center" direction="column" align="center">
-        <CBox mb="3">
-          <CFlex justify="center" direction="row" align="center">
-            <topArtists />
-          </CFlex>
-        </CBox>
+        <CBox mb="3"> </CBox>
         <CButton
           left-icon="arrow-forward"
-          @click="$router.push('/char-ai')"
+          @click="$router.push('#')"
           variant-color="green"
         >
-          Criar personagem com IA
+          iniciar
         </CButton>
       </CFlex>
     </CBox>
@@ -81,7 +77,6 @@ export default {
   inject: ['$chakraColorMode', '$toggleColorMode'],
   data () {
     return {
-      showModal: false,
       mainStyles: {
         dark: {
           bg: 'gray.700',
